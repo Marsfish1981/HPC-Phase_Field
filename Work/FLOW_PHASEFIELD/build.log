@@ -1,0 +1,263 @@
+GMakerules.mak:118: update target 't/Win32.gfortran.mpi/c.depends' due to: ../../Src/F_BaseLib/fabio_c.c ../../Src/F_BaseLib/timer_c.c ../../Src/F_BaseLib/ppm_util_c.c ../../Src/F_BaseLib/system_util_c.c ../../Src/F_BaseLib/backtrace_c.cpp ../../Src/C_BaseLib/MemPool.cpp ../../Src/C_BaseLib/CArena.cpp ../../Src/C_BaseLib/Arena.cpp
+if not exist "t/Win32.gfortran.mpi" mkdir "t/Win32.gfortran.mpi"
+perl mkdep.pl -I ../../Src/C_BaseLib --odir t/Win32.gfortran.mpi/o ../../Src/F_BaseLib/fabio_c.c ../../Src/F_BaseLib/timer_c.c ../../Src/F_BaseLib/ppm_util_c.c ../../Src/F_BaseLib/system_util_c.c ../../Src/F_BaseLib/backtrace_c.cpp ../../Src/C_BaseLib/MemPool.cpp ../../Src/C_BaseLib/CArena.cpp ../../Src/C_BaseLib/Arena.cpp > t/Win32.gfortran.mpi/c.depends 
+GMakerules.mak:108: update target 't/Win32.gfortran.mpi/f90.depends' due to: init_phi.f90 normal.f90 pf_utility.f90 phase_field.f90 solute_field.f90 temperature_field.f90 write_plotfile.f90 flow_field.f90 main.f90 ../../Src/F_BaseLib/boxlib_f.f90 ../../Src/F_BaseLib/f2kcli.f90 ../../Src/F_BaseLib/BLProfiler_f90.f90 ../../Src/F_BaseLib/bl_constants.f90 ../../Src/F_BaseLib/bl_IO.f90 ../../Src/F_BaseLib/bl_prof_stubs.f90 ../../Src/F_BaseLib/bl_error.f90 ../../Src/F_BaseLib/bl_mem_stat.f90 ../../Src/F_BaseLib/bl_parmparse.f90 ../../Src/F_BaseLib/bl_space.f90 ../../Src/F_BaseLib/bl_stream.f90 ../../Src/F_BaseLib/bl_string.f90 ../../Src/F_BaseLib/bl_system.f90 ../../Src/F_BaseLib/bl_timer.f90 ../../Src/F_BaseLib/bl_types.f90 ../../Src/F_BaseLib/box_f.f90 ../../Src/F_BaseLib/knapsack.f90 ../../Src/F_BaseLib/layout.f90 ../../Src/F_BaseLib/boxarray_f.f90 ../../Src/F_BaseLib/box_util.f90 ../../Src/F_BaseLib/fab.f90 ../../Src/F_BaseLib/multifab_f.f90 fabio.f90 ../../Src/F_BaseLib/plotfile.f90 ../../Src/F_BaseLib/filler.f90 ../../Src/F_BaseLib/cluster_f.f90 ../../Src/F_BaseLib/interp.f90 ../../Src/F_BaseLib/fourth_order_interp_coeffs.f90 bc.f90 ../../Src/F_BaseLib/bc_functions.f90 ../../Src/F_BaseLib/bndry_reg.f90 ../../Src/F_BaseLib/ml_boxarray.f90 ../../Src/F_BaseLib/ml_layout.f90 ../../Src/F_BaseLib/ml_multifab.f90 ml_restrict_fill.f90 cc_restriction.f90 ../../Src/F_BaseLib/edge_restriction.f90 ../../Src/F_BaseLib/nodal_restriction.f90 ml_cc_restriction.f90 ../../Src/F_BaseLib/ml_nd_restriction.f90 ../../Src/F_BaseLib/nodal_neumann_bcs.f90 ../../Src/F_BaseLib/nodal_stencil_bc.f90 ../../Src/F_BaseLib/create_umac_grown.f90 ../../Src/F_BaseLib/define_bc_tower.f90 fillpatch.f90 multifab_fill_ghost_cells.f90 ../../Src/F_BaseLib/multifab_physbc_edgevel.f90 ../../Src/F_BaseLib/multifab_physbc.f90 ../../Src/F_BaseLib/list_box.f90 ../../Src/F_BaseLib/sort_box.f90 ../../Src/F_BaseLib/vector_i.f90 ../../Src/F_BaseLib/sort_d.f90 ../../Src/F_BaseLib/sort_i.f90 ../../Src/F_BaseLib/ppm_util.f90 ../../Src/F_BaseLib/cutcells.f90 regrid.f90 make_new_grids.f90 tag_boxes.f90 ../../Src/F_BaseLib/parallel.f90 ../../Src/F_BaseLib/omp_stubs.f90 ../../Src/F_BaseLib/backtrace_f.f90 ../../Src/C_BaseLib/mempool_f.f90
+if not exist "t/Win32.gfortran.mpi" mkdir "t/Win32.gfortran.mpi"
+perl moddep.pl  --odir t/Win32.gfortran.mpi/o  init_phi.f90 normal.f90 pf_utility.f90 phase_field.f90 solute_field.f90 temperature_field.f90 write_plotfile.f90 flow_field.f90 main.f90 ../../Src/F_BaseLib/boxlib_f.f90 ../../Src/F_BaseLib/f2kcli.f90 ../../Src/F_BaseLib/BLProfiler_f90.f90 ../../Src/F_BaseLib/bl_constants.f90 ../../Src/F_BaseLib/bl_IO.f90 ../../Src/F_BaseLib/bl_prof_stubs.f90 ../../Src/F_BaseLib/bl_error.f90 ../../Src/F_BaseLib/bl_mem_stat.f90 ../../Src/F_BaseLib/bl_parmparse.f90 ../../Src/F_BaseLib/bl_space.f90 ../../Src/F_BaseLib/bl_stream.f90 ../../Src/F_BaseLib/bl_string.f90 ../../Src/F_BaseLib/bl_system.f90 ../../Src/F_BaseLib/bl_timer.f90 ../../Src/F_BaseLib/bl_types.f90 ../../Src/F_BaseLib/box_f.f90 ../../Src/F_BaseLib/knapsack.f90 ../../Src/F_BaseLib/layout.f90 ../../Src/F_BaseLib/boxarray_f.f90 ../../Src/F_BaseLib/box_util.f90 ../../Src/F_BaseLib/fab.f90 ../../Src/F_BaseLib/multifab_f.f90 fabio.f90 ../../Src/F_BaseLib/plotfile.f90 ../../Src/F_BaseLib/filler.f90 ../../Src/F_BaseLib/cluster_f.f90 ../../Src/F_BaseLib/interp.f90 ../../Src/F_BaseLib/fourth_order_interp_coeffs.f90 bc.f90 ../../Src/F_BaseLib/bc_functions.f90 ../../Src/F_BaseLib/bndry_reg.f90 ../../Src/F_BaseLib/ml_boxarray.f90 ../../Src/F_BaseLib/ml_layout.f90 ../../Src/F_BaseLib/ml_multifab.f90 ml_restrict_fill.f90 cc_restriction.f90 ../../Src/F_BaseLib/edge_restriction.f90 ../../Src/F_BaseLib/nodal_restriction.f90 ml_cc_restriction.f90 ../../Src/F_BaseLib/ml_nd_restriction.f90 ../../Src/F_BaseLib/nodal_neumann_bcs.f90 ../../Src/F_BaseLib/nodal_stencil_bc.f90 ../../Src/F_BaseLib/create_umac_grown.f90 ../../Src/F_BaseLib/define_bc_tower.f90 fillpatch.f90 multifab_fill_ghost_cells.f90 ../../Src/F_BaseLib/multifab_physbc_edgevel.f90 ../../Src/F_BaseLib/multifab_physbc.f90 ../../Src/F_BaseLib/list_box.f90 ../../Src/F_BaseLib/sort_box.f90 ../../Src/F_BaseLib/vector_i.f90 ../../Src/F_BaseLib/sort_d.f90 ../../Src/F_BaseLib/sort_i.f90 ../../Src/F_BaseLib/ppm_util.f90 ../../Src/F_BaseLib/cutcells.f90 regrid.f90 make_new_grids.f90 tag_boxes.f90 ../../Src/F_BaseLib/parallel.f90 ../../Src/F_BaseLib/omp_stubs.f90 ../../Src/F_BaseLib/backtrace_f.f90 ../../Src/C_BaseLib/mempool_f.f90 > t/Win32.gfortran.mpi/f90.depends 
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/BLProfiler_f90.o' due to: ../../Src/F_BaseLib/BLProfiler_f90.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/BLProfiler_f90.o ../../Src/F_BaseLib/BLProfiler_f90.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_types.o' due to: ../../Src/F_BaseLib/bl_types.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_types.o ../../Src/F_BaseLib/bl_types.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/mempool_f.o' due to: ../../Src/C_BaseLib/mempool_f.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/mempool_f.o ../../Src/C_BaseLib/mempool_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_IO.o' due to: ../../Src/F_BaseLib/bl_IO.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_IO.o ../../Src/F_BaseLib/bl_IO.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/vector_i.o' due to: ../../Src/F_BaseLib/vector_i.f90 t/Win32.gfortran.mpi/o/mempool_f.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/vector_i.o ../../Src/F_BaseLib/vector_i.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/sort_i.o' due to: ../../Src/F_BaseLib/sort_i.f90 t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/sort_i.o ../../Src/F_BaseLib/sort_i.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/parallel.o' due to: ../../Src/F_BaseLib/parallel.f90 t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/vector_i.o t/Win32.gfortran.mpi/o/sort_i.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/parallel.o ../../Src/F_BaseLib/parallel.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/backtrace_f.o' due to: ../../Src/F_BaseLib/backtrace_f.f90 t/Win32.gfortran.mpi/o/parallel.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/backtrace_f.o ../../Src/F_BaseLib/backtrace_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bc.o' due to: bc.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bc.o bc.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_space.o' due to: ../../Src/F_BaseLib/bl_space.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_space.o ../../Src/F_BaseLib/bl_space.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bc_functions.o' due to: ../../Src/F_BaseLib/bc_functions.f90 t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/bl_space.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bc_functions.o ../../Src/F_BaseLib/bc_functions.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_constants.o' due to: ../../Src/F_BaseLib/bl_constants.f90 t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_constants.o ../../Src/F_BaseLib/bl_constants.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_error.o' due to: ../../Src/F_BaseLib/bl_error.f90 t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_error.o ../../Src/F_BaseLib/bl_error.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_string.o' due to: ../../Src/F_BaseLib/bl_string.f90 t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_string.o ../../Src/F_BaseLib/bl_string.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_mem_stat.o' due to: ../../Src/F_BaseLib/bl_mem_stat.f90 t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_mem_stat.o ../../Src/F_BaseLib/bl_mem_stat.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/f2kcli.o' due to: ../../Src/F_BaseLib/f2kcli.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/f2kcli.o ../../Src/F_BaseLib/f2kcli.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_parmparse.o' due to: ../../Src/F_BaseLib/bl_parmparse.f90 t/Win32.gfortran.mpi/o/f2kcli.o t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_parmparse.o ../../Src/F_BaseLib/bl_parmparse.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_prof_stubs.o' due to: ../../Src/F_BaseLib/bl_prof_stubs.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_prof_stubs.o ../../Src/F_BaseLib/bl_prof_stubs.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_stream.o' due to: ../../Src/F_BaseLib/bl_stream.f90 t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_stream.o ../../Src/F_BaseLib/bl_stream.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_system.o' due to: ../../Src/F_BaseLib/bl_system.f90 t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_system.o ../../Src/F_BaseLib/bl_system.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bl_timer.o' due to: ../../Src/F_BaseLib/bl_timer.f90 t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bl_timer.o ../../Src/F_BaseLib/bl_timer.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/omp_stubs.o' due to: ../../Src/F_BaseLib/omp_stubs.f90
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/omp_stubs.o ../../Src/F_BaseLib/omp_stubs.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/sort_d.o' due to: ../../Src/F_BaseLib/sort_d.f90 t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/sort_d.o ../../Src/F_BaseLib/sort_d.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/box_f.o' due to: ../../Src/F_BaseLib/box_f.f90 t/Win32.gfortran.mpi/o/bl_stream.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_space.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/box_f.o ../../Src/F_BaseLib/box_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/knapsack.o' due to: ../../Src/F_BaseLib/knapsack.f90 t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/sort_d.o t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/vector_i.o t/Win32.gfortran.mpi/o/sort_i.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/knapsack.o ../../Src/F_BaseLib/knapsack.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/fab.o' due to: ../../Src/F_BaseLib/fab.f90 t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_mem_stat.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/sort_i.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/fab.o ../../Src/F_BaseLib/fab.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/sort_box.o' due to: ../../Src/F_BaseLib/sort_box.f90 t/Win32.gfortran.mpi/o/box_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/sort_box.o ../../Src/F_BaseLib/sort_box.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/list_box.o' due to: ../../Src/F_BaseLib/list_box.f90 t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/list_box.o ../../Src/F_BaseLib/list_box.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/boxarray_f.o' due to: ../../Src/F_BaseLib/boxarray_f.f90 t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/sort_box.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/list_box.o t/Win32.gfortran.mpi/o/bl_mem_stat.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/boxarray_f.o ../../Src/F_BaseLib/boxarray_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/layout.o' due to: ../../Src/F_BaseLib/layout.f90 t/Win32.gfortran.mpi/o/mempool_f.o t/Win32.gfortran.mpi/o/knapsack.o t/Win32.gfortran.mpi/o/vector_i.o t/Win32.gfortran.mpi/o/sort_i.o t/Win32.gfortran.mpi/o/omp_stubs.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/fab.o t/Win32.gfortran.mpi/o/bl_mem_stat.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/boxarray_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/layout.o ../../Src/F_BaseLib/layout.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/multifab_f.o' due to: ../../Src/F_BaseLib/multifab_f.f90 t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/omp_stubs.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_mem_stat.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/fab.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/multifab_f.o ../../Src/F_BaseLib/multifab_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/bndry_reg.o' due to: ../../Src/F_BaseLib/bndry_reg.f90 t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/vector_i.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/bndry_reg.o ../../Src/F_BaseLib/bndry_reg.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/ml_boxarray.o' due to: ../../Src/F_BaseLib/ml_boxarray.f90 t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/boxarray_f.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/ml_boxarray.o ../../Src/F_BaseLib/ml_boxarray.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/box_util.o' due to: ../../Src/F_BaseLib/box_util.f90 t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/boxarray_f.o t/Win32.gfortran.mpi/o/ml_boxarray.o t/Win32.gfortran.mpi/o/box_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/box_util.o ../../Src/F_BaseLib/box_util.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/boxlib_f.o' due to: ../../Src/F_BaseLib/boxlib_f.f90 t/Win32.gfortran.mpi/o/omp_stubs.o t/Win32.gfortran.mpi/o/backtrace_f.o t/Win32.gfortran.mpi/o/parallel.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/boxlib_f.o ../../Src/F_BaseLib/boxlib_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/cc_restriction.o' due to: cc_restriction.f90 t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/cc_restriction.o cc_restriction.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/cluster_f.o' due to: ../../Src/F_BaseLib/cluster_f.f90 t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/boxarray_f.o t/Win32.gfortran.mpi/o/list_box.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/multifab_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/cluster_f.o ../../Src/F_BaseLib/cluster_f.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/ml_layout.o' due to: ../../Src/F_BaseLib/ml_layout.f90 t/Win32.gfortran.mpi/o/fab.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/ml_boxarray.o t/Win32.gfortran.mpi/o/knapsack.o t/Win32.gfortran.mpi/o/sort_i.o t/Win32.gfortran.mpi/o/vector_i.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/bl_IO.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/ml_layout.o ../../Src/F_BaseLib/ml_layout.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/define_bc_tower.o' due to: ../../Src/F_BaseLib/define_bc_tower.f90 t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/bc.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/define_bc_tower.o ../../Src/F_BaseLib/define_bc_tower.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/multifab_physbc_edgevel.o' due to: ../../Src/F_BaseLib/multifab_physbc_edgevel.f90 t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/bl_prof_stubs.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_constants.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/multifab_physbc_edgevel.o ../../Src/F_BaseLib/multifab_physbc_edgevel.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/create_umac_grown.o' due to: ../../Src/F_BaseLib/create_umac_grown.f90 t/Win32.gfortran.mpi/o/fab.o t/Win32.gfortran.mpi/o/multifab_physbc_edgevel.o t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/multifab_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/create_umac_grown.o ../../Src/F_BaseLib/create_umac_grown.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/cutcells.o' due to: ../../Src/F_BaseLib/cutcells.f90 t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/bl_error.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/cutcells.o ../../Src/F_BaseLib/cutcells.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/edge_restriction.o' due to: ../../Src/F_BaseLib/edge_restriction.f90 t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bl_constants.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/edge_restriction.o ../../Src/F_BaseLib/edge_restriction.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/ml_multifab.o' due to: ../../Src/F_BaseLib/ml_multifab.f90 t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/ml_layout.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/ml_multifab.o ../../Src/F_BaseLib/ml_multifab.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/fabio.o' due to: fabio.f90 t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/parallel.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/ml_multifab.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/bl_string.o t/Win32.gfortran.mpi/o/ml_boxarray.o t/Win32.gfortran.mpi/o/fab.o t/Win32.gfortran.mpi/o/bl_stream.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/fabio.o fabio.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/plotfile.o' due to: ../../Src/F_BaseLib/plotfile.f90 t/Win32.gfortran.mpi/o/bl_stream.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/box_f.o t/Win32.gfortran.mpi/o/fabio.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/plotfile.o ../../Src/F_BaseLib/plotfile.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/filler.o' due to: ../../Src/F_BaseLib/filler.f90 t/Win32.gfortran.mpi/o/plotfile.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/filler.o ../../Src/F_BaseLib/filler.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/fourth_order_interp_coeffs.o' due to: ../../Src/F_BaseLib/fourth_order_interp_coeffs.f90 t/Win32.gfortran.mpi/o/bl_types.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/fourth_order_interp_coeffs.o ../../Src/F_BaseLib/fourth_order_interp_coeffs.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/interp.o' due to: ../../Src/F_BaseLib/interp.f90 t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/fourth_order_interp_coeffs.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/bc.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/interp.o ../../Src/F_BaseLib/interp.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/multifab_physbc.o' due to: ../../Src/F_BaseLib/multifab_physbc.f90 t/Win32.gfortran.mpi/o/bl_constants.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/bc.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/multifab_physbc.o ../../Src/F_BaseLib/multifab_physbc.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/fillpatch.o' due to: fillpatch.f90 t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/interp.o t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/bl_constants.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/fillpatch.o fillpatch.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/ml_cc_restriction.o' due to: ml_cc_restriction.f90 t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/cc_restriction.o t/Win32.gfortran.mpi/o/edge_restriction.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/bl_constants.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/ml_cc_restriction.o ml_cc_restriction.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o' due to: multifab_fill_ghost_cells.f90 t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/fillpatch.o t/Win32.gfortran.mpi/o/bl_constants.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o multifab_fill_ghost_cells.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/ml_restrict_fill.o' due to: ml_restrict_fill.f90 t/Win32.gfortran.mpi/o/ml_cc_restriction.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/ml_restrict_fill.o ml_restrict_fill.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/pf_utility.o' due to: pf_utility.f90 t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/pf_utility.o pf_utility.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/flow_field.o' due to: flow_field.f90 t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/bl_types.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/define_bc_tower.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/flow_field.o flow_field.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/init_phi.o' due to: init_phi.f90 t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/multifab_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/init_phi.o init_phi.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/solute_field.o' due to: solute_field.f90 t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/multifab_physbc.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/solute_field.o solute_field.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/write_plotfile.o' due to: write_plotfile.f90 t/Win32.gfortran.mpi/o/fabio.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/pf_utility.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/write_plotfile.o write_plotfile.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/tag_boxes.o' due to: tag_boxes.f90 t/Win32.gfortran.mpi/o/bl_error.o t/Win32.gfortran.mpi/o/multifab_f.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/tag_boxes.o tag_boxes.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/make_new_grids.o' due to: make_new_grids.f90 t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/f2kcli.o t/Win32.gfortran.mpi/o/bl_IO.o t/Win32.gfortran.mpi/o/layout.o t/Win32.gfortran.mpi/o/ml_boxarray.o t/Win32.gfortran.mpi/o/boxarray_f.o t/Win32.gfortran.mpi/o/list_box.o t/Win32.gfortran.mpi/o/tag_boxes.o t/Win32.gfortran.mpi/o/boxlib_f.o t/Win32.gfortran.mpi/o/cluster_f.o t/Win32.gfortran.mpi/o/box_util.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/make_new_grids.o make_new_grids.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/regrid.o' due to: regrid.f90 t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/make_new_grids.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/regrid.o regrid.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/phase_field.o' due to: phase_field.f90 t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/phase_field.o phase_field.f90
+GMakerules.mak:56: update target 't/Win32.gfortran.mpi/o/temperature_field.o' due to: temperature_field.f90 t/Win32.gfortran.mpi/o/bc.o t/Win32.gfortran.mpi/o/ml_cc_restriction.o t/Win32.gfortran.mpi/o/multifab_physbc.o t/Win32.gfortran.mpi/o/multifab_fill_ghost_cells.o t/Win32.gfortran.mpi/o/pf_utility.o t/Win32.gfortran.mpi/o/multifab_f.o t/Win32.gfortran.mpi/o/define_bc_tower.o t/Win32.gfortran.mpi/o/ml_layout.o t/Win32.gfortran.mpi/o/ml_restrict_fill.o t/Win32.gfortran.mpi/o/bndry_reg.o
+if not exist "t/Win32.gfortran.mpi/o" mkdir "t/Win32.gfortran.mpi/o"
+if not exist "t/Win32.gfortran.mpi/m" mkdir "t/Win32.gfortran.mpi/m"
+gfortran  -Jt/Win32.gfortran.mpi/m -It/Win32.gfortran.mpi/m -g -O2 -ftree-vectorize -fno-range-check -IC:/Progra~1/MPICH2/include -DBL_USE_MPI   -c -o t/Win32.gfortran.mpi/o/temperature_field.o temperature_field.f90
+GMakerules.mak:56: recipe for target 't/Win32.gfortran.mpi/o/temperature_field.o' failed

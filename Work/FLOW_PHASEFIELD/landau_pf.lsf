@@ -1,0 +1,32 @@
+#BSUB -W 1000:00
+#BSUB -n 12
+#BSUB -R 'span[ptile=12]'
+#BSUB -q normal
+#BSUB -e %J.err
+#BSUB -o %J.out
+#BSUB -J Phase
+
+source /etc/profile.d/00-modules.sh
+
+INPUT1=inputs_2d
+
+# The program we want to execute (modify to suit your setup)
+EXEC=/home/zhipengguo/BoxLib-master/BoxLib-master/Tutorials/HeatEquation_EX4_F/main.Linux.gfortran.mpi.exe
+
+module load gcc/4.9.3
+module load mvapich2/2.1-gnu
+
+export MV2_SMP_USE_CMA=0
+
+# echo $LSB_HOSTS > lsb_hosts
+
+for h in `echo $LSB_HOSTS`
+do
+  echo ${h} >> machinefile.$LSB_JOBID
+done
+ncpu=`wc machinefile.$LSB_JOBID | awk '{print $1}'`
+
+mpiexec -n ${ncpu} -machinefile machinefile.$LSB_JOBID ${EXEC} ${INPUT1}
+
+rm -f machinefile.$LSB_JOBID
+

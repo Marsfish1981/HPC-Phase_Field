@@ -1,0 +1,231 @@
+&probin
+
+ ! Calculation parameters, related to domain
+ max_levs      = 4
+ dim           = 2
+ nsteps_0      = 1000
+ nsteps        = 10000
+ plot_int      = 2000
+ plot_int_1    = 10000
+ status_int    = 20
+ n_cell_x      = 640
+ n_cell_y      = 192
+ max_grid_size = 32
+
+ ! allowable options for this example are
+ ! -1 = PERIODIC
+ ! 12 = OUTLET (dphi/dn=0 at boundary)
+ ! 15 = NO_SLIP_WALL (wall with fixed phi=1)
+ bc_x_lo       = 12
+ bc_x_hi       = 12
+ bc_y_lo       = 12
+ bc_y_hi       = 12
+
+ ! Mesh refinement parameter
+ amr_buf_width           = 2
+ cluster_minwidth        = 16
+ cluster_blocking_factor = 8
+ cluster_min_eff         = 0.80
+
+ ! Regriding parameters
+ ! ada_regriding : use adaptive regriding, 1 means on
+ ! regrid_int : start number for regriding
+ ! regrid_amp_ref : amplification ratio for the reference number
+ ! regrid_int_max : maximum number thershold for regriding
+ ! regrid_int_min : minimum number thershold for regriding
+ ! The criterior for selecting the meaningful data
+ ! thers_gradient = 0.05 [gradient]
+ ada_regriding = 0
+ regrid_int  = 20
+ regrid_amp_ref = 2
+ regrid_int_max = 200
+ regrid_int_min = 10
+ thers_gradient  = 0.05
+
+ !Define plot mode
+ !plot_mode (without flow):
+ !           0 = AD,PF,UC,TH
+ !plot_mode (with flow):
+ !           0 = AD,PF,UC,TH,UX,UY,UZ
+ !           1 = AD,PF,UC,TH,UX,UY,UZ,RHO,F1-F9(in 2D, or F1-F19 in 3D)
+ plot_mode = 0
+
+ !Computing mode:
+ !  0 = normal mode
+ !  1 = load mode
+ !  2 = data management
+ compute_mode = 0
+
+ ! The calculation is defined using pairs of [coupled_mode,cal_tem_mode]
+ ! [0,0] : T is copy from previous time step
+ ! [0,1] : T is the sum of T0 and Rate_Cooling * time
+ ! [0,2] : T is calculated using the file specified
+ ! [1,0] : T is calculated using explicit algorithm
+ ! [1,1] : T is calculated using MG algorithm
+ coupled_mode = 0
+ cal_tem_mode = 0
+
+ ! Cooling mode:
+ ! [0], cooling at both sides
+ ! [1], cooling at bottom side
+ ! [2], cooling at top side
+ cooling_mode = 0
+
+ ! Works if the cal_tem_mode = 2
+ ! This variable specifies the number of the segments used during the simulation
+ ! For safety concerns, in the file, the temperature should be specified as
+ ! 1        0.0
+ ! 1000     0.2
+ ! nsteps   0.8
+ ! i.e. both starting and ending sides should be specified. if this value is 1
+ ! then only the first line will be read in and the value will be set constant
+ temp_seg_num  = 1
+
+ ! Writefile mode
+ !     0: only morphology files are written
+ !     1: morphology and tracking information are all written out
+ ! Write out the parabolic profiles if 1, else otherwise
+ !     0: no parabolic file is written out
+ !     1: YES
+ ! How many points are going to write out
+ !      N_para_Range = 100
+ ! How many time steps are going to skip to write out the parabolic files
+ !      plot_para_num   = 1
+ ! How many points are used for calculating the curvature at tip
+ !      ratio_select   = 0.5
+
+ write_file_mode = 0
+ write_para_file = 1
+ N_para_Range    = 40
+ plot_para_num   = 2
+ ratio_select    = 0.5
+
+ ! phase field parameters
+ ! no_noise =
+ !            0: only noise
+ !            1: only period shocks
+ !            2: noise + period shocks
+ ! seed type = 0 means equiaxed dendrite growth, while 1 means columnar
+ ! which use see_radius and ori_def to specified the layer at y bottom
+
+ no_noise      = 0
+ lamda         = 10.0
+ anis          = 0.020
+ anis_0        = 0.00
+ Le            = 1.00
+ kk            = 4.0
+ s_k           = 0.150
+ Mc00          = 1.00
+ p_a1          = 0.88390
+ p_a2          = 0.62670
+ thers         = 1.0E-6
+ noi_amp       = 2.0E-3
+ ori_def       = 0.0
+ temp_h_l      = 0.75
+ temp_h_r      = 0.75
+ temp_l        = 0.75
+ seed_radius   = 1.5
+ seed_num      = 1
+ seed_type     = 0
+ r_hyper       = 2.0
+ Rate_Cooling  = 0.0
+ temp_lowcut   = 0.10
+
+! The peridioc change external fields, workds when no_noise = 1
+! Two types of waves will be added to the source term of the phase field equation:
+!    1: sinowave, P = P0 * sin(2*PI*Nt/NT), where P0 measures the amplitude,
+!                                           Nt the current time step and
+!                                           NT the cycle period measured in time step
+!    2: square wave, P = P0 at t=[0,NT] and P= -P0 at t=[NT,2NT], i.e.
+!                                           the cycle time is 2NT.
+ period_type  = 1
+ period_p0    = 0.00
+ period_NT    = 1000
+
+! matrix rotation type - for 3D
+ ! 0: loc_x, loc_y, loc_z, ori,   nx, ny, nz
+ ! 1: loc_x, loc_y, loc_z, order, ang_x, ang_y, ang_z
+ ! 0 means rotate along [nx,ny,nz] for atan(ori) degrees
+ ! 1 means rotate along [1 0 0] for atan(ang_x) degrees
+ !                      [0 1 0] for atan(ang_y) degrees
+ !                      [0 0 1] for atan(ang_z) degrees
+ ! order means how does it rotate
+ !     1: Z, Y, X
+ !     2: Z, X, Y
+ !     3: Y, Z, X
+ !     4: Y, X, Z
+ !     5: X, Y, Z
+ !     6: X, Z, Y
+
+ rotation_type = 0
+
+ ! reference parameters
+ dx_def        = 6.4
+ dt01          = 0.1
+ dt08          = 0.8
+ dt_ratio      = 8
+
+ ! parameters for AMR
+ ! safe_n_init specifies the number of cells used to refine the seed center area
+ ! i.e. how many are surrounding the center
+ para_uc       = 0.3
+ para_th       = 0.1
+ amr_thers     = 0.005
+ safe_n_init   = 30
+
+ ! load mode information
+ load_folder_name = './CAL_DATA/sim0100001'
+ reset_plotnum    = 0
+
+ ! For flow parameters
+ do_solve_flow       = 1
+ solve_flow_only     = 0
+ kill_phi_flag       = 0
+ kill_body_force     = 1
+ kill_lorentz_force  = 1
+ flw_amp             = 10.0
+ flw_skip_level_n    = 0
+ gacc                = 2.0667E-3
+ belta_c             = 7.3E-2
+ multi_add_tau       = 0.0
+ flw_constrain_limit = 0.99
+
+ ! For lorentz forces
+ lorentz_omega      = 1.0
+ lorentz_amp_x      = 7.957E-6
+ lorentz_amp_y      = 0.0
+ 
+ ! The parameters for flow
+ ! flw_calculate_mode = 0: top to bottom
+ ! flw_calculate_mode = 1: bottom to top
+ flw_calculate_mode = 1
+ tau_LBM            = 0.6
+ thers_solid        = 0.90
+ flw_rho            = 1.0
+ para_u             = 1.0
+ thers_tau          = 3.0
+ 
+ ! Boundary condition type
+ ! 0: velocity is specified
+ ! 1: pressure is specified
+ cal_boundary_spec = 0
+ 
+ ! Boundary conditions for flow
+ ! 15: NO-SLIP WALL
+ ! -1: PERIODIC
+ ! 11: INLET
+ ! 12: OUTLET
+ ! 13: SYMMETRY
+ fl_x_lo       = 11
+ fl_x_hi       = 12
+ fl_y_lo       = 13
+ fl_y_hi       = 15
+ 
+ ! Specify the bounrary inputs
+ u_inlet_x_lo  = 0.1
+ u_inlet_x_hi  = 1.0
+ u_inlet_y_lo  = 1.0
+ u_inlet_y_hi  = 1.0
+
+
+/
