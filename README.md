@@ -3,4 +3,4 @@ This is a software package for simulation of micro-structure evolution using pha
 
 Boxlib (a block-structured AMR library) is used as a computation architecture.
 
-If you have questions, please contact Dr. Guo at zp_guo@mail.tsinghua.edu.cn.
+If you have questions, please contact Dr. Guo at zhipeng_guo@mail.tsinghua.edu.cn.
