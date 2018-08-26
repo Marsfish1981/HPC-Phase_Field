@@ -1,0 +1,57 @@
+
+AMRLIB_BASE=EXE
+ifeq ($(LBASE),amr)
+  AMRLIB_BASE=LIB
+endif
+
+C$(AMRLIB_BASE)_sources += Amr.cpp AmrLevel.cpp Cluster.cpp \
+                Derive.cpp ErrorList.cpp FluxRegister.cpp \
+                Interpolater.cpp StateData.cpp \
+                StateDescriptor.cpp TagBox.cpp \
+                AuxBoundaryData.cpp FillPatchUtil.cpp
+
+C$(AMRLIB_BASE)_headers += Amr.H AmrLevel.H \
+                Cluster.H Derive.H ErrorList.H FluxRegister.H \
+                LevelBld.H Interpolater.H StateData.H \
+                StateDescriptor.H TagBox.H PROB_AMR_F.H \
+                AuxBoundaryData.H FillPatchUtil.H
+
+F$(AMRLIB_BASE)_headers += FLUXREG_F.H INTERP_F.H
+
+F$(AMRLIB_BASE)_sources += FLUXREG_$(DIM)D.F INTERP_$(DIM)D.F \
+                           ARRAYLIM_$(DIM)D.F
+
+F$(AMRLIB_BASE)_sources += FILCC_$(DIM)D.F
+
+ifeq ($(DIM),3)
+  F$(AMRLIB_BASE)_sources += MAKESLICE_$(DIM)D.F
+endif
+
+ifeq ($(USE_SLABSTAT), TRUE)
+  DEFINES += -DUSE_SLABSTAT
+  C$(AMRLIB_BASE)_sources += SlabStat.cpp 
+  C$(AMRLIB_BASE)_headers += SlabState.H
+  F$(AMRLIB_BASE)_sources += SLABSTAT_$(DIM)D.F 
+  F$(AMRLIB_BASE)_headers += SLABSTAT_F.H MAKESLICE_F.H
+endif
+
+ifeq ($(USE_STATIONDATA), TRUE)
+  DEFINES += -DUSE_STATIONDATA
+  C$(AMRLIB_BASE)_sources += StationData.cpp 
+  C$(AMRLIB_BASE)_headers += StationData.H
+endif
+
+ifeq ($(USE_ARRAYVIEW),TRUE)
+  C$(AMRLIB_BASE)_headers += DatasetClient.H
+  C$(AMRLIB_BASE)_sources += DatasetClient.cpp
+endif
+
+ifeq ($(USE_PARTICLES), TRUE)
+  CEXE_headers += AmrParGDB.H AmrParticles.H
+endif
+
+ifeq ($(USE_SDCLIB), TRUE)
+  CEXE_sources += MLSDCAmr.cpp MLSDCAmrEncap.cpp
+  CEXE_headers += MLSDCAmr.H
+endif
+

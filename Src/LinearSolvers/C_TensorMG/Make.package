@@ -1,0 +1,19 @@
+MCMG_BASE=EXE
+ifeq ($(LBASE),mcmg)
+  MCMG_BASE=LIB
+endif
+C$(MCMG_BASE)_headers += DivVis.H MCCGSolver.H MCInterpBndryData.H MCLinOp.H
+C$(MCMG_BASE)_headers += MCMultiGrid.H
+
+C$(MCMG_BASE)_sources += DivVis.cpp MCCGSolver.cpp MCInterpBndryData.cpp MCLinOp.cpp
+C$(MCMG_BASE)_sources += MCMultiGrid.cpp
+
+F$(MCMG_BASE)_headers += DivVis_F.H MCINTERPBNDRYDATA_F.H MCLO_F.H
+F$(MCMG_BASE)_sources += MCLO_$(DIM)D.F MCINTERPBNDRYDATA_$(DIM)D.F
+
+ifeq ($(DIM),2)
+  F$(MCMG_BASE)_sources += DV_2D.F
+else
+  F$(MCMG_BASE)_sources += DV_3D1.F DV_3D2.F DV_3D3.F
+endif
+
